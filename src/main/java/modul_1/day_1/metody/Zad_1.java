@@ -6,6 +6,7 @@ public class Zad_1 {
         System.out.println("5^2 = " + square(5));
         System.out.println("Przeliczenie 100 PLN -> " + convertToUsd(100, 4.84) + " USD");
         System.out.println(createName("Damian","Jeleñ", "Jeleñ"));
+        System.out.println("Kwota netto z kwoty 5000 -> " + calculateNetto(5000, 12));
     }
 
     protected static int multiply(int num1, int num2) {
@@ -25,5 +26,9 @@ public class Zad_1 {
         return "Imie: " + name + "\n" +
                 "Nazwisko: " + surname + "\n" +
                 "Pseudonim: " + pseudonym;
+    }
+
+    protected static double calculateNetto(double gross, double vat) {
+        return gross + gross * vat;
     }
 }

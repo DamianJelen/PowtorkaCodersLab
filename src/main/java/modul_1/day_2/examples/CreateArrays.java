@@ -39,4 +39,20 @@ public class CreateArrays {
             showArrayOneDimension(intArray[i]);
         }
     }
+
+    public int sumElemArrayOneDimension(int[] intArray) {
+        int result = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            result += intArray[i];
+        }
+        return  result;
+    }
+
+    public int sumElemArraysTwoDimension(int[][] intArray) {
+        int result = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            result += sumElemArrayOneDimension(intArray[i]);
+        }
+        return result;
+    }
 }

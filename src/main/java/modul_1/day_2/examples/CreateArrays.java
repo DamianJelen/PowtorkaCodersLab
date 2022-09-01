@@ -21,6 +21,10 @@ public class CreateArrays {
         return resultIntArray;
     }
 
+    public int[][] createArraysTwoDimension(int bothLength) {
+        return createArraysTwoDimension(bothLength, bothLength);
+    }
+
     public int[][] createArraysTwoDimensionRandomSecLength(int firstLength) {
         int[][] resultIntArray = new int[firstLength][];
         for (int i = 0; i < firstLength; i++) {
@@ -52,6 +56,14 @@ public class CreateArrays {
         int result = 0;
         for (int i = 0; i < intArray.length; i++) {
             result += sumElemArrayOneDimension(intArray[i]);
+        }
+        return result;
+    }
+
+    public int sumMatrixTraceArrays(int[][] intArray) {
+        int result = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            result += intArray[i][i];
         }
         return result;
     }

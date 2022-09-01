@@ -1,5 +1,6 @@
 package modul_1.day_2.examples;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class CreateArrays {
@@ -18,5 +19,24 @@ public class CreateArrays {
             resultIntArray[i] = createArrayOneDimension(secondLength);
         }
         return resultIntArray;
+    }
+
+    public int[][] createArraysTwoDimensionRandomSecLength(int firstLength) {
+        int[][] resultIntArray = new int[firstLength][];
+        for (int i = 0; i < firstLength; i++) {
+            Random random = new Random();
+            resultIntArray[i] = createArrayOneDimension(random.nextInt(21));
+        }
+        return resultIntArray;
+    }
+
+    public void showArrayOneDimension(int[] intArray) {
+        System.out.println(Arrays.toString(intArray));
+    }
+
+    public void showArraysTwoDimension(int[][] intArray) {
+        for (int i = 0; i < intArray.length; i++) {
+            showArrayOneDimension(intArray[i]);
+        }
     }
 }

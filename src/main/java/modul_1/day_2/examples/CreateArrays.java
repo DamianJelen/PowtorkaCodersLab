@@ -67,4 +67,14 @@ public class CreateArrays {
         }
         return result;
     }
+
+    public int countArraysElem(int[][] intArray) {
+        int result = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = 0; j < intArray[i].length; j++) {
+                result += intArray[i].length > 0 ? 1 : 0;
+            }
+        }
+        return result;
+    }
 }

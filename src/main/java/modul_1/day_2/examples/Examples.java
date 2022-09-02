@@ -20,4 +20,12 @@ public class Examples {
         stringBuilder.reverse().append(" dodane po odwroceniu poprzedniego stringa");
         System.out.println(stringBuilder.toString());
     }
+
+    private static void showAlphabetAndNumbers() {
+        for (Character i = '0'; i <= 'z'; i++) {
+            if (Character.isDigit(i) || Character.isLetter(i)) {
+                System.out.print(i + ", ");
+            }
+        }
+    }
 }

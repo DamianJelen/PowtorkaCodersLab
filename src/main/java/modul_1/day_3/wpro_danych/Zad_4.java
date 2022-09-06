@@ -14,14 +14,14 @@ public class Zad_4 {
 
         System.out.print("Wprowadz liczbe całkowitą a = ");
         while (!scanner.hasNextInt()) {
-            System.out.print("Wprowdz liczbę całkowitą a = ");
+            System.out.print("Wprowadz liczbę całkowitą a = ");
             scanner.next();
         }
         a = scanner.nextInt();
 
-        System.out.print("Wprowdz liczbę całkowitą b = ");
+        System.out.print("Wprowadz liczbę całkowitą b = ");
         while (!scanner.hasNextInt()) {
-            System.out.print("Wprowdz liczbę całkowitą b = ");
+            System.out.print("Wprowadz liczbę całkowitą b = ");
             scanner.next();
         }
         b = scanner.nextInt();

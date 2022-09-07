@@ -1,0 +1,32 @@
+Rekordy, sealed classes, i vary!
+Ech, chyba jesteś za stary!
+
+    Dziś wszyscy siedzą przy IDE,
+    (ja nie chcę robić z igły wideł),
+    nie myślą, jak rozwiązać coś ładniej,
+    lecz porównują kolory składni.
+
+Micronaut, Quarcus, Jacarta,
+- ta ostatnia grzechu jest warta -
+i Spring Boot zza rogu kusi,
+więc szybciej i lepiej być musi.
+
+    Śmiem wątpić. Dziś desktop już kona,
+    Dziś web to frontendu korona,
+    więc nodejs triumfy dziś święci,
+    do Javy każdego zniechęci.
+
+JavaScript jest dynamiczny,
+i w tutorialach jest śliczny,
+lecz któż duży system utrzyma?
+Bez statycznych typów jest zima.
+
+    No dobrze, przyznaję rację.
+    Przeczytam JVM spec w wakacje.
+    Obczaję GC-ki i toole,
+    bo zdaje się, że Java - królem!
+
+Raczej królową, bo przecież
+nie ma dziś lepszej na świecie.
+I szczęściem mnie to napawa,
+bo przecież kobietą jest Java!

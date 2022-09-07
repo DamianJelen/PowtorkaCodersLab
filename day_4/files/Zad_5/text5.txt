@@ -1,0 +1,20 @@
+Phyton
+C
+Java
+C++
+C#
+Visual Basic
+JavaScript
+Assembly language
+SQL
+PHP
+Objective-C
+Go
+Delphi/Object Pascal
+MATLAB
+Fortan
+Swift
+Classic Visual Basic
+R
+Perl
+Ruby

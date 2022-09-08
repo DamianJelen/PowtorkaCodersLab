@@ -7,15 +7,32 @@ import java.nio.file.Paths;
 
 public class Zad_6 {
     public static void main(String[] args) {
-        System.out.println(count("day_4/files/Zad_5/text5.txt"));
+        System.out.println(countChars("day_4/files/Zad_5/text5.txt"));
+        System.out.println(countWords("day_4/files/Zad_5/text5.txt"));
     }
 
-    public static int count(String fileName) {
+    public static int countChars(String fileName) {
         int result = 0;
         Path path = Paths.get(fileName);
         try {
             for (String line : Files.readAllLines(path)) {
                 result += line.length();
+            }
+        } catch (IOException e) {
+            System.out.println("Nie można odczytać pliku '" + fileName + "'.");
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    public static int countWords(String fileName) {
+        int result = 0;
+        Path path = Paths.get(fileName);
+
+        try {
+            for (String line : Files.readAllLines(path)) {
+                result += line.split(" ").length;
             }
         } catch (IOException e) {
             System.out.println("Nie można odczytać pliku '" + fileName + "'.");

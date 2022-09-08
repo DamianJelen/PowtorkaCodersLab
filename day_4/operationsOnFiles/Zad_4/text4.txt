@@ -1,0 +1,4 @@
+Jakiś tekst
+dowolna ilość znakow
+kolejna linijka
+itd. ...

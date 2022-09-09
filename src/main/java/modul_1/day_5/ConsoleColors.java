@@ -1,4 +1,4 @@
-package pl.coderslab;
+package modul_1.day_5;
 
 
 /**

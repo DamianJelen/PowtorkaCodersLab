@@ -1,8 +1,8 @@
 package modul_2.day_7.dziedziczenie.zad_2;
 
 public class Shape {
-    private int x, y;
-    private String color;
+    protected int x, y;
+    protected String color;
 
     public Shape(int x, int y, String color) {
         this.x = x;

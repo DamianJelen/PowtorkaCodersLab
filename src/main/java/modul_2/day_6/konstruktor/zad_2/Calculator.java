@@ -3,9 +3,9 @@ package modul_2.day_6.konstruktor.zad_2;
 import java.util.Arrays;
 
 public class Calculator {
-    private String[] histOperation;
+    protected String[] histOperation;
 
-    private String[] addPos(String[] strArr) {
+    protected String[] addPos(String[] strArr) {
         return Arrays.copyOf(strArr, strArr.length + 1);
     }
 

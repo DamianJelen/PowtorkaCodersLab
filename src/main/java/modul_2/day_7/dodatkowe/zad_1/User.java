@@ -24,6 +24,25 @@ public class User extends Person {
         }
     }
 
+    public void returnBook(Book book) {
+        Book[] tmpBooks = new Book[0];
+        for (int i = 0; i < books.length; i++) {
+            if(!books[i].equals(book)) {
+                tmpBooks = addPos(tmpBooks);
+                tmpBooks[tmpBooks.length - 1] = books[i];
+            }
+        }
+        books = Arrays.copyOf(tmpBooks, tmpBooks.length);
+        book.setAvailable(true);
+    }
+
+    public void returnAllBooks() {
+        for (int i = 0; i < books.length; i++) {
+            books[i].setAvailable(true);
+        }
+        books = Arrays.copyOf(books, 0);
+    }
+
     public Book[] addPos(Book[] books) {
         books = Arrays.copyOf(books, books.length + 1);
         return books;

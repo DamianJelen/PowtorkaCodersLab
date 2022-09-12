@@ -10,7 +10,7 @@ public class Product {
         this.id = nextId;
         nextId++;
         this.name = name;
-        this.price = price;
+        setPrice(price);
     }
 
     public int getId() {
@@ -37,6 +37,7 @@ public class Product {
                 throw new IllegalArgumentException("error: The price must be greater then 0.");
             }
         } catch (IllegalArgumentException e) {
+            this.price = 0.01;
             e.printStackTrace();
         }
     }

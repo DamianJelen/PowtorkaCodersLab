@@ -1,32 +1,43 @@
 package modul_2.day_6.konstruktor.zad_2;
 
+import modul_2.day_7.obiektowosc.zad_1.AdvancedCalculator;
+
 import java.util.Arrays;
 
-public class Calculator {
-    protected String[] histOperation;
+public class Calculator extends AdvancedCalculator {
+    public String[] histOperation;
 
-    protected String[] addPos(String[] strArr) {
-        return Arrays.copyOf(strArr, strArr.length + 1);
-    }
+//    public String[] addPos(String[] strArr) {
+//        return Arrays.copyOf(strArr, strArr.length + 1);
+//    }
 
     public double add(double a, double b) {
         double result = a + b;
+        String strResult = "added " + a + " to " + b + " got " + result;
         histOperation = addPos(histOperation);
-        histOperation[histOperation.length - 1] = "added " + a + " to " + b + " got " + result;
+        staticHistOper = addPos(staticHistOper);
+        histOperation[histOperation.length - 1] = strResult;
+        staticHistOper[staticHistOper.length - 1] = strResult;
         return result;
     }
 
     public double multiply(double a, double b) {
         double result = a * b;
+        String strResult = "multiplied " + a + " with " + b + " got " + result;
         histOperation = addPos(histOperation);
-        histOperation[histOperation.length - 1] = "multiplied " + a + " with " + b + " got " + result;
+        staticHistOper = addPos(staticHistOper);
+        histOperation[histOperation.length - 1] = strResult;
+        staticHistOper[staticHistOper.length - 1] = strResult;
         return result;
     }
 
     public double subtract(double a, double b) {
         double result = b - a;
+        String strResult = "subtracted " + b + " from " + a + " got " + result;
         histOperation = addPos(histOperation);
-        histOperation[histOperation.length - 1] = "subtracted " + b + " from " + a + " got " + result;
+        staticHistOper = addPos(staticHistOper);
+        histOperation[histOperation.length - 1] = strResult;
+        staticHistOper[staticHistOper.length - 1] = strResult;
         return result;
     }
 
@@ -34,8 +45,11 @@ public class Calculator {
         double result;
         try {
             result = a / b;
+            String strResult = "divided " + a + " by " + b + " got " + result;
             histOperation = addPos(histOperation);
-            histOperation[histOperation.length - 1] = "divided " + a + " by " + b + " got " + result;
+            staticHistOper = addPos(staticHistOper);
+            histOperation[histOperation.length - 1] = strResult;
+            staticHistOper[staticHistOper.length - 1] = strResult;
             return result;
         } catch (Exception e) {
             e.printStackTrace();

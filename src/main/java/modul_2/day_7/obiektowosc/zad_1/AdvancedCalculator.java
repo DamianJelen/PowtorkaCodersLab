@@ -23,8 +23,17 @@ public class AdvancedCalculator{
     }
 
     public static void printGlobalOperations() {
+        printGlobalOperations(staticHistOper.length);
+    }
+
+    public static void printGlobalOperations(int length) {
         for (int i = 0; i < staticHistOper.length; i++) {
             System.out.println(staticHistOper[i]);
+            i = i == length - 1 ? staticHistOper.length : i;
         }
+    }
+
+    public static void printGlobalOperations(String length) {
+        printGlobalOperations(String.valueOf(length));
     }
 }

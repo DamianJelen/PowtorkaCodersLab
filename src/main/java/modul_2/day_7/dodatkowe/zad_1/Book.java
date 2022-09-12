@@ -8,16 +8,11 @@ public class Book {
     private Author[] authors;
 
     public Book(int id, String title) {
-        this.id = id;
-        this.title = title;
-        this.available = true;
+        new Book(id, title, null, null);
     }
 
     public Book(int id, String title, Author author) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.available = true;
+        new Book(id, title, author, null);
     }
 
     public Book(int id, String title, Author author, Author[] authors) {

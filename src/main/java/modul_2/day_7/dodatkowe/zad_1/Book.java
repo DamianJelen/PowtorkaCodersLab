@@ -6,6 +6,7 @@ public class Book {
     private boolean available;
     private Author author;
     private Author[] authors;
+    private int popularity;
 
     public Book(int id, String title) {
         new Book(id, title, null, null);
@@ -61,5 +62,17 @@ public class Book {
 
     public void setAuthors(Author[] authors) {
         this.authors = authors;
+    }
+
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
+    }
+
+    public boolean equals(Book book) {
+        return this.getId() == book.getId();
     }
 }

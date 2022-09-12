@@ -11,9 +11,12 @@ public class User extends Person {
     }
 
     public void addBook(Book book) {
+        int tmpPopularity;
         addPos(this.books);
         if (book.isAvailable()) {
             book.setAvailable(false);
+            tmpPopularity = book.getPopularity();
+            book.setPopularity(++tmpPopularity);
             this.books[books.length - 1] = book;
             System.out.println("Dodano książkę: \"" + book.getTitle() + "\"");
         } else {

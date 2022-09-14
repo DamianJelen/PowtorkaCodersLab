@@ -11,3 +11,9 @@ mysql -u [user_name] -p [database_name] < file.sql
 
 unsigned
 auto_increment
+
+alter table_name add new_col_name datatype
+alter table_name drop column col_name
+alter table_name modify column col_name new_datatype
+
+DESCRIBE table_name

@@ -1,0 +1,13 @@
+CREATE DATABASE database_name
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE database_name;
+
+mysqldump -u [user_name] -p [database_name] > file.sql
+
+-- zanim załądujemy baze, baza musi już być wcześcniej utworzona
+mysql -u [user_name] -p [database_name] < file.sql
+
+unsigned
+auto_increment

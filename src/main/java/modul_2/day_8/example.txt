@@ -17,3 +17,10 @@ alter table_name drop column col_name
 alter table_name modify column col_name new_datatype
 
 DESCRIBE table_name
+
+UPDATE table_name
+SET column_name = new_value
+WHERE condition;
+
+DELETE FROM table_name
+WHERE condition;

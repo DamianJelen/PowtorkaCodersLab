@@ -7,6 +7,7 @@ public class DbUtil {
     static String DB_USER = "root";
     static String DB_PASS = "coderslab";
     private static final String DELETE_QUERY = "DELETE FROM tableName WHERE id = ?";
+    private static String UPDATE_QUERY = "UPDATE tableName SET name = ?, address = ? WHERE id = ?";
 
     public static Connection connection(String dbName) throws SQLException {
         DB_URL = DB_URL.replaceAll("my_db", dbName);
@@ -62,5 +63,15 @@ public class DbUtil {
         return result;
     }
 
-
+    public static void editMovie(Connection connection, String tableName, int id, String... params) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_QUERY.replaceAll("tableName", tableName))) {
+            for (int i = 0; i < params.length; i++) {
+                preparedStatement.setString(i + 1, params[i]);
+            }
+            preparedStatement.setInt(3, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

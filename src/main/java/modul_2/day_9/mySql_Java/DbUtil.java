@@ -47,4 +47,20 @@ public class DbUtil {
             throwables.printStackTrace();
         }
     }
+
+    public static double readMinMaxAvgSumCount(Connection connection, String query, String columnName) {
+        double result = 0;
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query); ResultSet resultSet = preparedStatement.executeQuery()) {
+            while(resultSet.first()) {
+                result = resultSet.getDouble(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return result;
+    }
+
+
 }

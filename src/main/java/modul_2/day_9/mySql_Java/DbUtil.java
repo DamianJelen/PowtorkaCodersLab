@@ -6,6 +6,7 @@ public class DbUtil {
     static String DB_URL = "jdbc:mysql://localhost:3306/my_db?useSSL=true&characterEncoding=utf8&serverTimezone=UTC";
     static String DB_USER = "root";
     static String DB_PASS = "coderslab";
+    private static final String DELETE_QUERY = "DELETE FROM tableName WHERE id = ?";
 
     public static Connection connection(String dbName) throws SQLException {
         DB_URL = DB_URL.replaceAll("my_db", dbName);
@@ -33,6 +34,15 @@ public class DbUtil {
                 System.out.println();
             }
 
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public static void remove(Connection connection, String tableName, int id) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(DELETE_QUERY.replaceAll("tableName", tableName))) {
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

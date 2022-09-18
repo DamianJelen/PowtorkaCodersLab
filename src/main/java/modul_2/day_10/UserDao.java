@@ -3,6 +3,8 @@ package modul_2.day_10;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserDao {
@@ -58,6 +60,23 @@ public class UserDao {
         }
 
         return user;
+    }
+
+    public List<User> readAllUsers() {
+        List<User> usersList = new ArrayList<>();
+
+        try (PreparedStatement preparedStatement = DbConn.connection().prepareStatement(READ_ALL_USERS_QUERY)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                usersList.add(new User(resultSet.getInt("id"), resultSet.getString("username"),
+                        resultSet.getString("email"), resultSet.getString("def_1")));
+            }
+            resultSet.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return usersList;
     }
 
     public void updateUser(User user) {

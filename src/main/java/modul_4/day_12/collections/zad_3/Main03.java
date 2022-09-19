@@ -2,6 +2,7 @@ package modul_4.day_12.collections.zad_3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 
 public class Main03 {
@@ -10,6 +11,8 @@ public class Main03 {
         showList(cityList);
         System.out.println("\n========= sublist ================");
         showList(subList(cityList, 0, 5));
+        System.out.println("\n========= reverse list ================");
+        showList(reverse(cityList));
     }
 
     public static List<City> initialize() {
@@ -32,5 +35,20 @@ public class Main03 {
 
     public static List<City> subList(List<City> list, int start, int end) {
         return list.subList(start, end);
+    }
+
+    public static List<City> reverse(List<City> list) {
+        List<City> result = new ArrayList<>();
+
+        ListIterator<City> listIterator = list.listIterator();
+        for (; listIterator.hasNext();) {
+            listIterator.next();
+        }
+
+        for (; listIterator.hasPrevious();) {
+            result.add(listIterator.previous());
+        }
+
+        return result;
     }
 }

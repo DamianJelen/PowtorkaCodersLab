@@ -29,7 +29,7 @@
     
     <servlet>
         <servlet-name>Get1</servlet-name>
-        <servlet-class>modul_4.day_13.get.Get1</servlet-class>
+        <servlet-class>modul_4.day_13.get.zad_1.Get1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Get1</servlet-name>

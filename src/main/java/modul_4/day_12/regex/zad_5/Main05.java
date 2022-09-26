@@ -2,9 +2,7 @@ package modul_4.day_12.regex.zad_5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -15,7 +13,7 @@ public class Main05 {
         printList(readCorrectPerson("day_12/regex/people.csv"));
     }
 
-    static List<Person> readCorrectPerson(String fileName) {
+    public static List<Person> readCorrectPerson(String fileName) {
         File file = new File(fileName);
         List<Person> result = new ArrayList<>();
 

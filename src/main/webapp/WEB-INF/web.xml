@@ -26,4 +26,13 @@
         <servlet-name>Servlet13</servlet-name>
         <url-pattern>/servlet13</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Get1</servlet-name>
+        <servlet-class>modul_4.day_13.get.Get1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Get1</servlet-name>
+        <url-pattern>/get1</url-pattern>
+    </servlet-mapping>
 </web-app>

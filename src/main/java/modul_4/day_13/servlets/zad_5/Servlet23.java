@@ -18,7 +18,7 @@ public class Servlet23 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().append("Here should be write txt file").append("<br/>");
+        resp.getWriter().append("Under, should be loaded text from file").append("<br/>");
         resp.getWriter().append(readFileTxt("../../../../../home/damian/Java Developer/PowtorkaCodersLab/day_12/regex/operations.txt"));
 
     }

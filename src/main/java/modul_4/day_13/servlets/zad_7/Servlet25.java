@@ -1,4 +1,4 @@
-package modul_4.day_13.servlets;
+package modul_4.day_13.servlets.zad_7;
 
 import com.google.common.collect.Lists;
 

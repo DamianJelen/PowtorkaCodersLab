@@ -1,4 +1,4 @@
-package modul_4.day_13.servlets.zad_7;
+package modul_4.day_13.servlets.zad_8;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

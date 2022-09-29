@@ -35,4 +35,13 @@
         <servlet-name>Get1</servlet-name>
         <url-pattern>/get1</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Servlet26</servlet-name>
+        <servlet-class>modul_4.day_13.servlets.zad_7.Servlet26</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet26</servlet-name>
+        <url-pattern>/servlet26</url-pattern>
+    </servlet-mapping>
 </web-app>

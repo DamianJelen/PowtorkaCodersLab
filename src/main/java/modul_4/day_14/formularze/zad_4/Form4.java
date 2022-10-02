@@ -25,7 +25,6 @@ public class Form4 extends HttpServlet {
     static String calculate(double a, double b, double c) {
         String result = "";
         double delta = b * b - 4 * a * c;
-        System.out.println(delta);
         if(delta < 0) {
             result = "not exist";
         } else if(delta == 0) {

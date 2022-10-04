@@ -17,6 +17,7 @@ public class Cookie4Del extends HttpServlet {
         for(Cookie cookie : cookies) {
             if(cookie.getName().equals(cookieName)) {
                 cookie.setMaxAge(0);
+                resp.addCookie(cookie);
             }
         }
         resp.sendRedirect("localhost:8080/showAllCookies");

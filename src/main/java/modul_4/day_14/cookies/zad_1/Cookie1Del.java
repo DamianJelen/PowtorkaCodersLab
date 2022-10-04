@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 
 @WebServlet(name="CookieDel", value = "/deleteCookie")
 public class Cookie1Del extends HttpServlet {
@@ -14,14 +15,19 @@ public class Cookie1Del extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Cookie[] cookies = req.getCookies();
         int licz = 0;
+        boolean checkCookie = false;
         for(Cookie cookie : cookies) {
             ++licz;
             if(cookie.getName().equals("User")) {
                 resp.getWriter().append("Delete cookie \"" + cookie.getName() + "\"");
                 cookie.setMaxAge(0);
-            } else if(cookies.length == licz) {
-                resp.getWriter().append("Not exist");
+                resp.addCookie(cookie);
+                checkCookie = true;
             }
+        }
+
+        if((!checkCookie) || cookies.length == 0) {
+            resp.getWriter().append("Cookies not exist");
         }
     }
 }

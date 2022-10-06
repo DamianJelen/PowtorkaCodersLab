@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/servlet31" method="post">
+        <label>Amount to be converted: <input type="number" name="amount" min="0.01" step="0.01"/></label>
+        <p>Convert on:</p>
+        <input type="radio" name="convertType" value="EU" checked/><label>EUR -> USD</label><br/>
+        <input type="radio" name="convertType" value="UE"/><label>USD -> EUR</label><br/>
+        <input type="radio" name="convertType" value="EP"/><label>EUR -> PLN</label><br/>
+        <input type="radio" name="convertType" value="PE"/><label>PLN -> EUR</label><br/>
+        <input type="radio" name="convertType" value="UP"/><label>USD -> PLN</label><br/>
+        <input type="radio" name="convertType" value="PU"/><label>PLN -> USD</label><br/><br/>
+        <input type="submit" value="Convert"/>
+    </form>
+</body>
+</html>

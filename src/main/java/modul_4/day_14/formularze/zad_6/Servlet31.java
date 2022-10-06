@@ -10,8 +10,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/servlet31")
 public class Servlet31 extends HttpServlet {
     static double PLN = 1;
-    static double EUR = 4.84;
-    static double USD = 4.90;
+    static double EUR = 4.8445;
+    static double USD = 4.8989;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

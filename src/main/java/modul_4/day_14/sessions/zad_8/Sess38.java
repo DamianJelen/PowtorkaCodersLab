@@ -46,9 +46,8 @@ public class Sess38 extends HttpServlet {
         int correctAnswer = 0;
         if (session.getAttribute("correctAnswers") == null) {
             session.setAttribute("correctAnswers", 0);
-        } else {
-            correctAnswer = (int) session.getAttribute("correctAnswers");
         }
+        correctAnswer = (int) session.getAttribute("correctAnswers");
         if(answer.equals(countries[licznik].getCapitalName())) {
             ++correctAnswer;
             session.setAttribute("correctAnswers", correctAnswer);
@@ -57,12 +56,10 @@ public class Sess38 extends HttpServlet {
             response.sendRedirect("/session38");
         }
         if (licznik == countries.length - 1) {
-            session.removeAttribute("correctAnswer");
+            session.removeAttribute("correctAnswers");
             session.removeAttribute("licznik");
-            response.getWriter().append(session.getAttribute("correctAnswer") + "");
             response.getWriter().append("Correct answers: ").append(correctAnswer + "<br/>").
                     append("<a href=\"../session38\">Repeat test</a>");
-
         }
     }
 }

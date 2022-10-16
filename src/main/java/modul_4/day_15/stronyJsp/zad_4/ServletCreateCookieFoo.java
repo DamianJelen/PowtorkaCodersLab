@@ -1,4 +1,4 @@
-package modul_4.day_15.zad_4;
+package modul_4.day_15.stronyJsp.zad_4;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

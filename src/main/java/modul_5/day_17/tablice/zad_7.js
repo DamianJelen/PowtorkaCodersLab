@@ -1,14 +1,23 @@
 function addArrays(arr_1, arr_2) {
   let resArr = [];
-  if(arr_1.length >= arr2.length) {
+  if(arr_1.length == arr_2.length) {
     for(let i = 0; i < arr_1.length; i++) {
       resArr.push(arr_1[i] + arr_2[i])
     }
-  } else {
+  } else if(arr_2.length < arr_1.length) {
     for(let i = 0; i < arr_2.length; i++) {
       resArr.push(arr_1[i] + arr_2[i])
     }
-    for(let i)
+    for(let i = arr_2.length; i < arr_1.length; i++) {
+      resArr.push(arr_1[i])
+    }
+  } else {
+    for(let i = 0; i < arr_1.length; i++) {
+      resArr.push(arr_1[i] + arr_2[i])
+    }
+    for(let i = arr_1.length; i < arr_2.length; i++) {
+      resArr.push(arr_2[i])
+    }
   }
   return resArr;
 }

@@ -1,0 +1,11 @@
+.slider ul{
+    list-style: none;
+}
+
+.slider li{
+    display: none;
+}
+
+.slider{
+    display: inline-block;
+}
